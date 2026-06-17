@@ -3,7 +3,7 @@
     "name": "Aditya",
     "title": "Software Developer",
     "location": "India",
-   "summary": "Software Engineer focused on building scalable full-stack applications and backend systems using React.js, Node.js, Express.js, MongoDB, and TypeScript. Experienced in developing production-ready applications, RESTful APIs, and modern web solutions with strong problem-solving skills.",
+    "summary": "Software Engineer focused on building scalable full-stack applications and backend systems using React.js, Node.js, Express.js, MongoDB, and TypeScript. Experienced in developing production-ready applications, RESTful APIs, and modern web solutions with strong problem-solving skills.",
     "profileImage": "./myphoto.jpeg"
   },
   "sections": {
@@ -39,65 +39,69 @@
           "Github",
           "Git",
           "Vercel",
-          "JIRA", "DSA",
-  "OOP",
-  "DBMS",
-  "Operating Systems",
-  "Computer Networks"
+          "JIRA",
+          "DSA",
+          "OOP",
+          "DBMS",
+          "Operating Systems",
+          "Computer Networks"
         ]
       }
     },
-   "experience": {
-  "enabled": true,
-  "title": "Work Experience",
-  "items": [
-    {
-      "company": "Koncept Software Solutions",
-      "position": "Software Developer Intern",
-      "period": "Jan 2026 - Apr 2026",
-      "description": [
-        "Developed CRM modules and internal tools to streamline business operations.",
-        "Built responsive and scalable web interfaces using React.js.",
-        "Collaborated with developers to deliver efficient and user-friendly solutions."
+    "experience": {
+      "enabled": true,
+      "title": "Work Experience",
+      "items": [
+        {
+          "company": "Koncept Software Solutions",
+          "position": "Software Developer Intern",
+          "period": "Jan 2026 - Apr 2026",
+          "description": [
+            "Developed CRM modules and internal tools to streamline business operations.",
+            "Built responsive and scalable web interfaces using React.js.",
+            "Collaborated with developers to deliver efficient and user-friendly solutions."
+          ]
+        },
+        {
+          "company": "Procx Value Engineering Private Limited",
+          "position": "Software Developer Intern",
+          "period": "Oct 2025 - Dec 2025",
+          "description": [
+            "Built and deployed a scalable MERN stack company website with improved performance.",
+            "Designed and implemented RESTful APIs for seamless frontend-backend integration.",
+            "Collaborated in a team to develop maintainable, production-ready features."
+          ]
+        }
       ]
     },
-    {
-      "company": "Procx Value Engineering Private Limited",
-      "position": "Software Developer Intern",
-      "period": "Oct 2025 - Dec 2025",
-      "description": [
-        "Built and deployed a scalable MERN stack company website with improved performance.",
-        "Designed and implemented RESTful APIs for seamless frontend-backend integration.",
-        "Collaborated in a team to develop maintainable, production-ready features."
-      ]
-    }
-  ]
-}
     "projects": {
-  "title": "Study Notion",
-  "description": "Built a scalable full-stack ed-tech platform supporting course creation, enrollment and student dashboards. Implemented secure JWT authentication, OTP verification, Razorpay integration and RESTful APIs following MVC architecture.",
-  "tags": [
-    "MongoDB",
-    "Express.js",
-    "React.js",
-    "Node.js",
-    "Cloudinary",
-    "Razorpay"
-  ],
-  "previewUrl": "https://69ef80b9faaea355355e3784--studytechnoadityamishra.netlify.app/"
-  
-},
-{
-  "title": "ApiMaster",
-  "description": "Browser-based API testing platform supporting multiple HTTP methods, JSON validation, response inspection and developer-focused workflows.",
-  "tags": [
-    "React.js",
-    "JavaScript",
-    "Tailwind CSS",
-    "REST APIs"
-  ],
-  "previewUrl": "https://apimasterbyaditya.netlify.app/"
-}
+      "enabled": true,
+      "title": "Featured Projects",
+      "items": [
+        {
+          "title": "Study Notion",
+          "description": "Built a scalable full-stack ed-tech platform supporting course creation, enrollment and student dashboards. Implemented secure JWT authentication, OTP verification, Razorpay integration and RESTful APIs following MVC architecture.",
+          "tags": [
+            "MongoDB",
+            "Express.js",
+            "React.js",
+            "Node.js",
+            "Cloudinary",
+            "Razorpay"
+          ],
+          "previewUrl": "https://69ef80b9faaea355355e3784--studytechnoadityamishra.netlify.app/"
+        },
+        {
+          "title": "ApiMaster",
+          "description": "Browser-based API testing platform supporting multiple HTTP methods, JSON validation, response inspection and developer-focused workflows.",
+          "tags": [
+            "React.js",
+            "JavaScript",
+            "Tailwind CSS",
+            "REST APIs"
+          ],
+          "previewUrl": "https://apimasterbyaditya.netlify.app/"
+        }
       ]
     },
     "education": {
@@ -116,28 +120,28 @@
         }
       ]
     },
-   "achievements": {
-  "enabled": true,
-  "title": "Achievements",
-  "items": [
-    {
-      "title": "Qualified GATE 2026 (Computer Science)",
-      "description": ""
+    "achievements": {
+      "enabled": true,
+      "title": "Achievements",
+      "items": [
+        {
+          "title": "Qualified GATE 2026 (Computer Science)",
+          "description": ""
+        },
+        {
+          "title": "Secured Rank 57 in TCS CodeVita Round 1",
+          "description": ""
+        },
+        {
+          "title": "Secured Rank 585 in TCS CodeVita Round 2",
+          "description": ""
+        },
+        {
+          "title": "Solved 500+ DSA Problems",
+          "description": ""
+        }
+      ]
     },
-    {
-      "title": "Secured Rank 57 in TCS CodeVita Round 1",
-      "description": ""
-    },
-    {
-      "title": "Secured Rank 585 in TCS CodeVita Round 2",
-      "description": ""
-    },
-    {
-      "title": "Solved 500+ DSA Problems",
-      "description": ""
-    }
-  ]
-}
     "contact": {
       "enabled": true,
       "title": "Contact",
@@ -157,18 +161,13 @@
           "platform": "github",
           "url": "https://github.com/adityamishra009",
           "icon": "github"
-        },
-        // {
-        //   "platform": "leetcode",
-        //   "url": "https://leetcode.com/u/ankii2216/",
-        //   "icon": "leetcode"
-        // }
+        }
       ]
     },
     "navigation": {
       "enabled": true,
       "items": [
-        { "name": "Home", "url": "/" },
+        { "name": "Home", "url": "#home" },
         { "name": "About", "url": "#about" },
         { "name": "Experience", "url": "#experience" },
         { "name": "Projects", "url": "#projects" },

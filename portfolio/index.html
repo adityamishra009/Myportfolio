@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aditya mishra software Developer</title>
     
-    <!-- Favicon - Server/Database Icon for Backend Developer -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%231e293b'/><stop offset='100%25' style='stop-color:%230f172a'/></linearGradient></defs><rect width='100' height='100' rx='16' fill='url(%23bg)'/><ellipse cx='50' cy='30' rx='28' ry='10' fill='none' stroke='%2322d3ee' stroke-width='3'/><path d='M22 30 L22 50 Q22 60 50 60 Q78 60 78 50 L78 30' fill='none' stroke='%2322d3ee' stroke-width='3'/><ellipse cx='50' cy='50' rx='28' ry='10' fill='none' stroke='%2322d3ee' stroke-width='3'/><path d='M22 50 L22 70 Q22 80 50 80 Q78 80 78 70 L78 50' fill='none' stroke='%23f97316' stroke-width='3'/><ellipse cx='50' cy='70' rx='28' ry='10' fill='none' stroke='%23f97316' stroke-width='3'/></svg>">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,13 +27,13 @@
               mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
             },
             colors: {
-              background: "#09090b", // Zinc 950
-              surface: "#18181b",    // Zinc 900
-              surfaceHighlight: "#27272a", // Zinc 800
-              primary: "#3b82f6",    // Blue 500
-              accent: "#f97316",     // Orange 500
-              textMain: "#fafafa",   // Zinc 50
-              textMuted: "#a1a1aa",  // Zinc 400
+              background: "#09090b",
+              surface: "#18181b",
+              surfaceHighlight: "#27272a",
+              primary: "#3b82f6",
+              accent: "#f97316",
+              textMain: "#fafafa",
+              textMuted: "#a1a1aa",
             },
             animation: {
               'blob': 'blob 7s infinite',
@@ -62,100 +61,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     
     <style>
-      /* Base Styles */
       body {
         font-family: 'Space Grotesk', sans-serif;
         background-color: #fafafa;
         color: #18181b;
         transition: background-color 0.3s, color 0.3s;
       }
-      
       .dark body {
         background-color: #09090b;
         color: #fafafa;
       }
-
-      /* Noise Texture */
       .bg-noise {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
         z-index: -1;
         opacity: 0.05;
         pointer-events: none;
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
       }
-
-      /* Scroll Animation Utilities */
       .reveal {
         opacity: 0;
         transform: translateY(30px);
         transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
       }
-      
       .reveal.active {
         opacity: 1;
         transform: translateY(0);
       }
-
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #a1a1aa;
-        border-radius: 10px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #71717a;
-      }
-
-      /* Utility Classes */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #a1a1aa; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #71717a; }
       .glass-panel {
         background: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         border: 1px solid rgba(0, 0, 0, 0.08);
       }
-      
       .dark .glass-panel {
         background: rgba(24, 24, 27, 0.6);
         border: 1px solid rgba(255, 255, 255, 0.08);
       }
-
-      /* Gradient Text */
       .text-gradient {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-image: linear-gradient(to right, #3b82f6, #8b5cf6, #f97316);
       }
-      
-      /* Card Hover Glow */
-      .card-hover {
-        transition: all 0.3s ease;
-      }
+      .card-hover { transition: all 0.3s ease; }
       .card-hover:hover {
         transform: translateY(-4px);
         box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
         border-color: rgba(59, 130, 246, 0.3);
       }
-
-      /* Terminal Code Styling */
       .code-line {
         font-family: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', monospace;
         display: flex;
         gap: 12px;
       }
-      .line-num {
-        color: #52525b;
-        user-select: none;
-      }
+      .line-num { color: #52525b; user-select: none; }
     </style>
   </head>
   <body class="antialiased selection:bg-orange-500 selection:text-white">
@@ -174,7 +139,7 @@
 
     <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-40 hidden md:block">
       <div id="nav-container" class="glass-panel rounded-full px-6 py-3 flex gap-8 text-sm font-medium text-gray-600 dark:text-gray-300 shadow-xl shadow-black/5">
-        </div>
+      </div>
     </nav>
 
     <button id="mobile-menu-btn" class="md:hidden fixed top-6 left-6 z-50 p-3 rounded-full glass-panel text-gray-800 dark:text-gray-200">
@@ -190,11 +155,7 @@
        </div>
     </main>
 
-
-
     <script>
-      // --- Helper Functions ---
-      
       const getIcon = (name) => {
         const icons = {
            linkedin: '<svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>',
@@ -204,8 +165,6 @@
         };
         return icons[name] || icons.link;
       };
-
-      // --- Main Logic ---
 
       async function loadPortfolio() {
         try {
@@ -221,38 +180,33 @@
       }
 
       function renderApp(data) {
-        // 1. Navigation
-        const navItems = data.sections.navigation.items.map(item => 
+        const navItems = data.sections.navigation.items.map(item =>
           `<a href="${item.url}" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">${item.name}</a>`
         ).join('');
-        
         document.getElementById('nav-container').innerHTML = navItems;
 
-        const mobileNavItems = data.sections.navigation.items.map(item => 
+        const mobileNavItems = data.sections.navigation.items.map(item =>
           `<a href="${item.url}" class="mobile-link dark:text-white text-gray-200 hover:text-white transition-colors" onclick="toggleMobileMenu()">${item.name}</a>`
         ).join('');
         document.getElementById('mobile-nav-links').innerHTML = mobileNavItems;
 
-        // 2. Main Sections Construction
         const { hero, about, experience, projects, education, achievements, contact, social } = data.sections;
-        const { name, title, summary, profileImage, location } = data.settings;
+        const { name, title, summary, profileImage } = data.settings;
 
         const renderExperienceDescription = (description) => {
           if (Array.isArray(description)) {
             return `
               <ul class="list-disc marker:text-orange-500 text-gray-600 dark:text-gray-400 leading-relaxed text-sm pl-5 space-y-2">
                 ${description.map(point => `<li>${point}</li>`).join('')}
-              </ul>
-            `;
+              </ul>`;
           }
           if (typeof description === 'string') {
-            const parts = description.split(/\n|•/).map(part => part.trim()).filter(Boolean);
+            const parts = description.split(/\n|•/).map(p => p.trim()).filter(Boolean);
             if (parts.length > 1) {
               return `
                 <ul class="list-disc marker:text-orange-500 text-gray-600 dark:text-gray-400 leading-relaxed text-sm pl-5 space-y-2">
                   ${parts.map(point => `<li>${point}</li>`).join('')}
-                </ul>
-              `;
+                </ul>`;
             }
             return `<p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">${description}</p>`;
           }
@@ -261,122 +215,72 @@
 
         let contentHTML = '';
 
-        // --- HERO SECTION (Terminal Style) ---
+        // --- HERO ---
         contentHTML += `
           <section id="home" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[60vh] lg:min-h-[80vh] reveal active">
             <div class="space-y-6">
-               <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/20 bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-mono font-medium">
-                 <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-                  </span>
-                 Available for work
-               </div>
-               <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
-                 Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">${name}</span>
-               </h1>
-               <h2 class="text-2xl text-gray-500 dark:text-gray-400 font-medium">${title}</h2>
-               <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
-                 ${summary}
-               </p>
-               
-               <div class="flex flex-wrap gap-4 pt-4">
-                 ${hero.ctaButtons.map((btn, idx) => `
-                   <a href="${btn.url}" target="_blank" class="${idx === 0 ? 
-                     'bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-200' : 
-                     'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400'} 
-                     px-6 py-3 rounded-xl font-medium transition-all duration-300 shadow-sm hover:shadow-md flex items-center gap-2">
-                     ${btn.text}
-                     ${idx === 0 ? '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>' : ''}
-                   </a>
-                 `).join('')}
-               </div>
-               
-               <div class="flex gap-4 pt-4">
-                 ${social.items.map(s => `
-                   <a href="${s.url}" target="_blank" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
-                     ${getIcon(s.platform)}
-                   </a>
-                 `).join('')}
-               </div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/20 bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-mono font-medium">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                </span>
+                Available for work
+              </div>
+              <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">${name}</span>
+              </h1>
+              <h2 class="text-2xl text-gray-500 dark:text-gray-400 font-medium">${title}</h2>
+              <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">${summary}</p>
+              <div class="flex flex-wrap gap-4 pt-4">
+                ${hero.ctaButtons.map((btn, idx) => `
+                  <a href="${btn.url}" target="_blank" class="${idx === 0 ?
+                    'bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-200' :
+                    'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400'}
+                    px-6 py-3 rounded-xl font-medium transition-all duration-300 shadow-sm hover:shadow-md flex items-center gap-2">
+                    ${btn.text}
+                    ${idx === 0 ? '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>' : ''}
+                  </a>
+                `).join('')}
+              </div>
+              <div class="flex gap-4 pt-4">
+                ${social.items.map(s => `
+                  <a href="${s.url}" target="_blank" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                    ${getIcon(s.platform)}
+                  </a>
+                `).join('')}
+              </div>
             </div>
-
-            <div class="order-1 lg:order-2 relative group perspective-1000 hidden lg:block">
-               <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-orange-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-               <div class="relative bg-gray-900 dark:bg-gray-900 rounded-2xl border border-gray-700 shadow-2xl overflow-hidden transform transition-transform group-hover:rotate-1">
-                  <div class="flex items-center gap-2 px-4 py-3 border-b border-gray-700 bg-gray-950">
-                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                    <div class="ml-2 text-xs text-gray-400 font-mono">ankit@dev ~</div>
-                  </div>
-                  <div class="p-6 font-mono text-sm overflow-hidden text-gray-100">
-                    <div class="code-line"><span class="line-num text-gray-500">1</span> <span class="text-purple-400">class</span> <span class="text-yellow-300">Developer</span> <span class="text-gray-300">{</span></div>
-                    <div class="code-line"><span class="line-num text-gray-500">2</span> &nbsp;&nbsp;<span class="text-blue-400">constructor</span><span class="text-gray-300">()</span> <span class="text-gray-300">{</span></div>
-                    <div class="code-line"><span class="line-num text-gray-500">3</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-400">this</span><span class="text-gray-300">.</span>name <span class="text-gray-300">=</span> <span class="text-green-400">"${name}"</span><span class="text-gray-300">;</span></div>
-                    <div class="code-line"><span class="line-num text-gray-500">4</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-400">this</span><span class="text-gray-300">.</span>role <span class="text-gray-300">=</span> <span class="text-green-400">"${title}"</span><span class="text-gray-300">;</span></div>
-                    <div class="code-line"><span class="line-num text-gray-500">5</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-400">this</span><span class="text-gray-300">.</span>location <span class="text-gray-300">=</span> <span class="text-green-400">"${location}"</span><span class="text-gray-300">;</span></div>
-                    <div class="code-line"><span class="line-num text-gray-500">6</span> &nbsp;&nbsp;<span class="text-gray-300">}</span></div>
-                    <div class="code-line"><span class="line-num text-gray-500">7</span> </div>
-                    <div class="code-line"><span class="line-num text-gray-500">8</span> &nbsp;&nbsp;<span class="text-blue-400">skills</span><span class="text-gray-300">()</span> <span class="text-gray-300">{</span></div>
-                    <div class="code-line"><span class="line-num text-gray-500">9</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">return</span> <span class="text-gray-300">[</span></div>
-                    <div class="code-line"><span class="line-num text-gray-500">10</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400">"Node.js"</span><span class="text-gray-300">,</span> <span class="text-green-400">"Postgres"</span><span class="text-gray-300">,</span></div>
-                    <div class="code-line"><span class="line-num text-gray-500">11</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400">"AWS"</span><span class="text-gray-300">,</span> <span class="text-green-400">"Docker"</span></div>
-                    <div class="code-line"><span class="line-num text-gray-500">12</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-gray-300">];</span></div>
-                    <div class="code-line"><span class="line-num text-gray-500">13</span>&nbsp;&nbsp;<span class="text-gray-300">}</span></div>
-                    <div class="code-line"><span class="line-num text-gray-500">14</span><span class="text-gray-300">}</span></div>
-                  </div>
-               </div>
+            <div class="order-1 lg:order-2 flex justify-center">
+              <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-orange-500 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                <img src="${profileImage}" alt="${name}"
+                  class="relative w-72 h-72 md:w-80 md:h-80 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-2xl" />
+              </div>
             </div>
           </section>
         `;
 
-        // --- SKILLS & ABOUT (Bento Grid) ---
-        if (about.enabled) {
+        // --- ABOUT / SKILLS ---
+        if (about && about.enabled && about.skills && about.skills.enabled) {
           contentHTML += `
             <section id="about" class="reveal">
               <h3 class="text-xl font-bold mb-8 flex items-center gap-3">
                 <span class="w-8 h-[2px] bg-orange-500"></span>
-                Tech Stack
+                ${about.skills.title}
               </h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-blue-500">
-                   <h4 class="text-lg font-semibold mb-4 text-gray-800 dark:text-white">Technologies</h4>
-                   <div class="flex flex-wrap gap-2">
-                     ${about.skills.items.map(skill => `
-                       <span class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md border border-gray-200 dark:border-gray-700 hover:border-blue-500 hover:text-blue-500 transition-colors cursor-default">
-                         ${skill}
-                       </span>
-                     `).join('')}
-                   </div>
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                   <div class="glass-panel p-6 rounded-2xl flex flex-col justify-center items-center text-center">
-                      <span class="text-4xl font-bold text-blue-500 mb-1">6+</span>
-                      <span class="text-xs text-gray-500 uppercase tracking-wider">Months Exp</span>
-                   </div>
-                   <div class="glass-panel p-6 rounded-2xl flex flex-col justify-center items-center text-center">
-                      <span class="text-4xl font-bold text-orange-500 mb-1">500+</span>
-                      <span class="text-xs text-gray-500 uppercase tracking-wider">LeetCode</span>
-                   </div>
-                   <div class="col-span-2 glass-panel p-6 rounded-2xl flex items-center justify-between">
-                      <div>
-                        <div class="text-sm text-gray-500">Current Location</div>
-                        <div class="font-semibold text-lg dark:text-white">${location}</div>
-                      </div>
-                      <div class="text-right">
-                         <div class="text-sm text-gray-500">Focus</div>
-                         <div class="font-semibold text-lg text-blue-500">Backend Systems</div>
-                      </div>
-                   </div>
-                </div>
+              <div class="flex flex-wrap gap-3">
+                ${about.skills.items.map(skill => `
+                  <span class="px-4 py-2 glass-panel rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-blue-500/40 transition-colors">
+                    ${skill}
+                  </span>
+                `).join('')}
               </div>
             </section>
           `;
         }
 
-        // --- EXPERIENCE (Vertical Timeline) ---
-        if (experience.enabled) {
+        // --- EXPERIENCE ---
+        if (experience && experience.enabled) {
           contentHTML += `
             <section id="experience" class="reveal">
               <h3 class="text-xl font-bold mb-8 flex items-center gap-3">
@@ -384,27 +288,26 @@
                 Experience
               </h3>
               <div class="space-y-8 relative border-l-2 border-gray-200 dark:border-gray-800 ml-3 md:ml-6">
-                 ${experience.items.map(job => `
-                   <div class="relative pl-8 md:pl-12 group">
-                     <span class="absolute -left-[9px] top-2 h-4 w-4 rounded-full bg-white dark:bg-gray-900 border-2 border-blue-500 group-hover:scale-125 transition-transform"></span>
-                     
-                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
-                       <h4 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-500 transition-colors">${job.position}</h4>
-                       <span class="text-sm font-mono text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">${job.period}</span>
-                     </div>
-                     <div class="text-lg text-gray-700 dark:text-gray-300 font-medium mb-3">${job.company}</div>
-                     <div class="border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-700 pl-4 transition-colors">
-                       ${renderExperienceDescription(job.description)}
-                     </div>
-                   </div>
-                 `).join('')}
+                ${experience.items.map(job => `
+                  <div class="relative pl-8 md:pl-12 group">
+                    <span class="absolute -left-[9px] top-2 h-4 w-4 rounded-full bg-white dark:bg-gray-900 border-2 border-blue-500 group-hover:scale-125 transition-transform"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
+                      <h4 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-500 transition-colors">${job.position}</h4>
+                      <span class="text-sm font-mono text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">${job.period}</span>
+                    </div>
+                    <div class="text-lg text-gray-700 dark:text-gray-300 font-medium mb-3">${job.company}</div>
+                    <div class="border-l-2 border-transparent hover:border-gray-300 dark:hover:border-gray-700 pl-4 transition-colors">
+                      ${renderExperienceDescription(job.description)}
+                    </div>
+                  </div>
+                `).join('')}
               </div>
             </section>
           `;
         }
 
-        // --- PROJECTS (Grid Cards) ---
-        if (projects.enabled) {
+        // --- PROJECTS ---
+        if (projects && projects.enabled) {
           contentHTML += `
             <section id="projects" class="reveal">
               <h3 class="text-xl font-bold mb-8 flex items-center gap-3">
@@ -416,23 +319,17 @@
                   <div class="glass-panel p-6 rounded-2xl card-hover flex flex-col h-full">
                     <div class="flex justify-between items-start mb-4">
                       <div class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
-                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                       </div>
                       <div class="flex gap-3">
                         ${proj.repoUrl ? `<a href="${proj.repoUrl}" target="_blank" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">${getIcon('github')}</a>` : ''}
                         ${proj.previewUrl ? `<a href="${proj.previewUrl}" target="_blank" class="text-gray-400 hover:text-blue-500">${getIcon('link')}</a>` : ''}
                       </div>
                     </div>
-                    
                     <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">${proj.title}</h4>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed">
-                      ${proj.description}
-                    </p>
-                    
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed">${proj.description}</p>
                     <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
-                      ${proj.tags.map(tag => `
-                        <span class="text-xs font-mono text-gray-500">#${tag}</span>
-                      `).join('')}
+                      ${proj.tags.map(tag => `<span class="text-xs font-mono text-gray-500">#${tag}</span>`).join('')}
                     </div>
                   </div>
                 `).join('')}
@@ -467,7 +364,7 @@
         }
 
         // --- ACHIEVEMENTS ---
-        if (achievements.enabled) {
+        if (achievements && achievements.enabled) {
           contentHTML += `
             <section id="achievements" class="reveal">
               <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
@@ -475,17 +372,17 @@
                 Achievements
               </h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                 ${achievements.items.map(item => `
-                   <div class="flex items-start gap-4 p-4 rounded-xl border border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
-                      <div class="text-yellow-500 mt-1">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                      </div>
-                      <div>
-                        <h4 class="font-bold text-gray-900 dark:text-white text-sm">${item.title}</h4>
-                        <p class="text-xs text-gray-500 mt-1">${item.description}</p>
-                      </div>
-                   </div>
-                 `).join('')}
+                ${achievements.items.map(item => `
+                  <div class="flex items-start gap-4 p-4 rounded-xl border border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    <div class="text-yellow-500 mt-1">
+                      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900 dark:text-white text-sm">${item.title}</h4>
+                      <p class="text-xs text-gray-500 mt-1">${item.description}</p>
+                    </div>
+                  </div>
+                `).join('')}
               </div>
             </section>
           `;
@@ -493,47 +390,40 @@
 
         // --- CONTACT ---
         contentHTML += `
-           <section id="contact" class="reveal py-12">
-             <div class="glass-panel rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-orange-500"></div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Let's Build Something Scalable</h2>
-                <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-lg mx-auto">
-                   I'm currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
-                </p>
-                <a href="mailto:${contact.email}" class="inline-flex items-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform">
-                   <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                   Say Hello
-                </a>
-             </div>
-           </section>
+          <section id="contact" class="reveal py-12">
+            <div class="glass-panel rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+              <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-orange-500"></div>
+              <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Let's Build Something Scalable</h2>
+              <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-lg mx-auto">
+                I'm currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+              </p>
+              <a href="mailto:${contact.email}" class="inline-flex items-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                Say Hello
+              </a>
+            </div>
+          </section>
         `;
 
-        // Render to DOM
         document.getElementById('app').innerHTML = contentHTML;
-      }
-
-      // --- Animation & UX Utils ---
+      } // ← closing brace for renderApp()
 
       function setupScrollObserver() {
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-            }
+            if (entry.isIntersecting) entry.target.classList.add('active');
           });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
       }
 
-      // --- Theme Handling ---
+      // --- Theme ---
       const themeToggle = document.getElementById('theme-toggle');
       const sunIcon = document.getElementById('sun-icon');
       const moonIcon = document.getElementById('moon-icon');
-      
       const userTheme = localStorage.getItem('theme');
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      
+
       const toggleTheme = (isDark) => {
         if (isDark) {
           document.documentElement.classList.add('dark');
@@ -547,23 +437,21 @@
           localStorage.setItem('theme', 'light');
         }
       };
-      
-      // Initial check
+
       if (userTheme === 'dark' || (!userTheme && systemTheme)) {
         toggleTheme(true);
       } else {
         toggleTheme(false);
       }
-      
+
       themeToggle.addEventListener('click', () => {
-        const isDark = document.documentElement.classList.contains('dark');
-        toggleTheme(!isDark);
+        toggleTheme(!document.documentElement.classList.contains('dark'));
       });
 
       // --- Mobile Menu ---
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
-      
+
       function toggleMobileMenu() {
         const isOpen = !mobileMenu.classList.contains('-translate-x-full');
         if (isOpen) {
@@ -572,12 +460,11 @@
           mobileMenu.classList.remove('-translate-x-full');
         }
       }
-      
+
       mobileMenuBtn.addEventListener('click', toggleMobileMenu);
 
-      // Start App
-      document.addEventListener('DOMContentLoaded', loadPortfolio);
-
+      // Start — script is at bottom of body so DOM is already ready
+      loadPortfolio();
     </script>
   </body>
 </html>
